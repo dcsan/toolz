@@ -1,0 +1,43 @@
+{
+  "name": "@dcsan/belt",
+  "version": "0.0.1",
+  "description": "Toolz Belt",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "tstest": "ts-jest",
+    "test": "jest",
+    "testwatch": "DEBUG=* DEBUG_LEVEL=info ts-node-dev src/TestRunner.ts",
+    "build": "tsc",
+    "postbuild": "cpx 'src/data/**' 'dist/data' ",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcsan/toolz.git"
+  },
+  "author": "DCsan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcsan/toolz/issues"
+  },
+  "homepage": "https://github.com/dcsan/toolz#readme",
+  "keywords": [
+    "utilities"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.9",
+    "jest": "^26.6.3",
+    "ts-jest": "^26.4.4",
+    "ts-node-dev": "^1.0.0",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cpx": "^1.5.0",
+    "csv-parser": "^2.3.3",
+    "debug-levels": "^0.2.0",
+    "lodash": "^4.17.20"
+  }
+}
